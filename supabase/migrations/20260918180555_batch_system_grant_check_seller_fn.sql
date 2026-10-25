@@ -1,0 +1,1 @@
+GRANT EXECUTE ON FUNCTION public.sv_check_seller_permissions() TO authenticated;

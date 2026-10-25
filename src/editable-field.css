@@ -1,0 +1,15 @@
+/* EditableTextField placeholder support */
+[contenteditable][data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+[contenteditable][data-placeholder]:empty:focus::before {
+  color: rgba(255, 255, 255, 0.15);
+}
+.input-base[data-placeholder]:empty::before {
+  color: #555555;
+}
+.input-base[data-placeholder]:empty:focus::before {
+  color: #555555;
+}

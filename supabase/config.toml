@@ -1,0 +1,60 @@
+[functions.coaching-token]
+verify_jwt = true
+
+[functions.deepsolver-solve]
+verify_jwt = true
+
+[functions.deepsolver-test]
+verify_jwt = true
+
+[functions.send-otp]
+verify_jwt = true
+
+[functions.security-notify]
+verify_jwt = true
+
+[functions.password-recovery]
+verify_jwt = false
+
+[functions.creator-onboarding-email]
+verify_jwt = true
+
+[functions.batch-notify]
+verify_jwt = true
+
+[functions.ai-assist]
+verify_jwt = true
+
+[functions.lounge-verify-password]
+verify_jwt = true
+
+[functions.lounge-set-password]
+verify_jwt = true
+
+[functions.create-checkout]
+verify_jwt = true
+
+[functions.ai-coach]
+verify_jwt = true
+
+[functions.stripe-webhook]
+verify_jwt = false
+
+[functions.sk-provision]
+verify_jwt = false
+
+[functions.sk-redeem-token]
+verify_jwt = false
+
+[functions.staff-invite]
+verify_jwt = false
+
+[functions.intro-video]
+verify_jwt = true
+
+[functions.membership-reconcile]
+verify_jwt = false
+
+[functions.grade-challenge]
+verify_jwt = true
+

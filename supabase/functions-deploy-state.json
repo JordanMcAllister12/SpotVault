@@ -1,0 +1,85 @@
+{
+  "projectId": "69820723",
+  "functions": {
+    "ai-assist": {
+      "hasChanged": false,
+      "hash": "e2d381b9c1c87550fcd44f75a03b503f5f4fa2f5c3550497cef0011d5068f85e2ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "ai-coach": {
+      "hasChanged": false,
+      "hash": "ef90bd96414d9cc97ff129773eb3d43d1765f7174343104985a32fa73fae2ba22ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "batch-notify": {
+      "hasChanged": false,
+      "hash": "a922ee077b7feadc97987d92e546f3e316c44d652d3c74aec7e10d2fddb4bbaa2ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "coaching-token": {
+      "hasChanged": false,
+      "hash": "dbe60f6ef980a777fcfab20757ba32db22acceb1945eb2c51b2b0ee2df7929682ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "create-checkout": {
+      "hasChanged": false,
+      "hash": "2db5c6669c96c516243f2bf61e2e899d692e9ff655be0abf8a907a24fd62d5722ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "creator-onboarding-email": {
+      "hasChanged": false,
+      "hash": "c36baa4c6d26539f820f69f89d05590ae32289d3a639f84431c40a75286c76ff2ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "deepsolver-solve": {
+      "hasChanged": false,
+      "hash": "1c9131758e178fd85356dade7bd3fa53cd0cacd9a2341f334f91b504e3fc30682ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "deepsolver-test": {
+      "hasChanged": false,
+      "hash": "83739722a092c8f8dde57f10915ab85f1fb97ea43d01d5be01c8de325d960eb52ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "grade-challenge": {
+      "hasChanged": false,
+      "hash": "440706964518becf956b16946997f7f1204965bfa81860cb47de6ce1efde6eee2ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "intro-video": {
+      "hasChanged": false,
+      "hash": "c223124935c38edc205981285b7fc93bad40497411c11199c83d6a58b75eefd62ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "lounge-set-password": {
+      "hasChanged": false,
+      "hash": "6b56dce776b8e612c9236a94f8bb1bf21dedc43c7b9b415b311cbba3c9d3548c2ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "lounge-verify-password": {
+      "hasChanged": false,
+      "hash": "7d3b9ecffa9df166355e1d33c39159142de987f701a0f63909a24c83970eb0462ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "membership-reconcile": {
+      "hasChanged": false,
+      "hash": "9cadef86d5e666dc0ab2fd0e7ef798e900d48c790b7c81c200348d33979f27a92ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "password-recovery": {
+      "hasChanged": false,
+      "hash": "c910a177dc2cd3b126c9bade37686967c28c078a39c4cb8a3a049946e875624f2ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "security-notify": {
+      "hasChanged": false,
+      "hash": "b97daf44a8b973bd63c2d23aab25bd75bc81d72ad015f52b45fcb188d100da332ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "send-otp": {
+      "hasChanged": false,
+      "hash": "d78ae42bc0b952019cf08b4d1e75451aaa6e331ddf0db44149646244bc0d203a2ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "sk-provision": {
+      "hasChanged": false,
+      "hash": "298f65676c5a338ca09ec71be44290687c3b6f9fbe21da02fcfebeed9074e9ea2ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "sk-redeem-token": {
+      "hasChanged": false,
+      "hash": "36843d3c9c0a214797f0c8880e33b2181be171a4befe644b7b6d66f93a4c1fa52ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "staff-invite": {
+      "hasChanged": false,
+      "hash": "c9e51bc872d489f3ff446134cec7912e5e9327925c02b7e850dc63797bc71e662ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    },
+    "stripe-webhook": {
+      "hasChanged": false,
+      "hash": "7e0ffb613f98f1b59e74b2aa9d5afb159f65e8f4babd3f2f15b97615006ea6822ebb8bdaafc04efd198385af48e1f5d4e643112c67cacfb2b22e4ca6ffc08537"
+    }
+  }
+}

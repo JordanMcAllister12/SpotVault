@@ -1,0 +1,467 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f5f5f5;
+  background: #050608;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  min-width: 320px;
+  background: #050608;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.enter-vault-btn {
+  border: 1px solid #c0911e;
+  background: #0d0e10;
+  color: #f5e6b0;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.enter-vault-btn:hover:not(:disabled) {
+  background: #141518;
+  border-color: #d4a52c;
+  box-shadow: 0 0 14px rgba(196, 145, 30, 0.35), 0 0 28px rgba(196, 145, 30, 0.15);
+}
+.enter-vault-btn:disabled {
+  opacity: 0.5;
+}
+
+.inline-playing-card {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 1px;
+  line-height: 0;
+  user-select: none;
+}
+.inline-playing-card svg {
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}
+
+.hh-standalone-flow {
+  height: auto !important;
+  min-height: 510px;
+}
+
+.hh-standalone-playback-controls {
+  width: 100%;
+  flex: 0 0 auto;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .hh-table-container,
+  .hh-replayer-center {
+    overflow: hidden;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes hh-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.input-base {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #232a32;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 12px;
+  outline: none;
+}
+.input-base:focus {
+  border-color: rgba(192, 145, 30, 0.5);
+}
+.input-base::placeholder {
+  color: #555555;
+}
+
+.spotvault-auth-input {
+  background-color: #0d0e10;
+  color: #f5f5f5;
+  caret-color: #d4a52c;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.spotvault-auth-input:hover {
+  background-color: #111316;
+}
+.spotvault-auth-input:focus {
+  background-color: #0d0e10;
+  box-shadow: 0 0 0 1px rgba(212, 165, 44, 0.45);
+}
+.spotvault-auth-input:-webkit-autofill,
+.spotvault-auth-input:-webkit-autofill:hover,
+.spotvault-auth-input:-webkit-autofill:focus,
+.spotvault-auth-input:-webkit-autofill:active {
+  -webkit-text-fill-color: #f5f5f5;
+  -webkit-box-shadow: 0 0 0 1000px #0d0e10 inset;
+  box-shadow: 0 0 0 1000px #0d0e10 inset;
+  caret-color: #d4a52c;
+  transition: background-color 9999s ease-out 0s;
+}
+
+/* ── Global header white-text buttons (credits, notifications, profile, portal selector) ── */
+.hdr-white-btn {
+  border: 1px solid rgba(192, 145, 30, 0.4);
+  background: rgba(12, 10, 8, 0.72);
+  color: #e8e6e3;
+  text-shadow: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.hdr-white-btn:hover {
+  border-color: rgba(212, 165, 44, 0.7);
+  background: rgba(20, 16, 8, 0.85);
+  box-shadow: 0 0 10px rgba(212, 165, 44, 0.28), 0 0 22px rgba(212, 165, 44, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+.hdr-white-btn:active {
+  border-color: rgba(212, 165, 44, 0.9);
+  background: linear-gradient(135deg, rgba(192, 145, 30, 0.35) 0%, rgba(128, 96, 31, 0.25) 100%);
+  color: #1a1408;
+}
+.hdr-white-icon {
+  color: #e8e6e3;
+  transition: color 0.25s ease;
+}
+.hdr-white-text {
+  color: #e8e6e3;
+  transition: color 0.25s ease;
+}
+.hdr-white-btn:hover .hdr-white-icon,
+.hdr-white-btn:hover .hdr-white-text {
+  color: #ffffff;
+}
+.hdr-white-btn:active .hdr-white-icon,
+.hdr-white-btn:active .hdr-white-text {
+  color: #1a1408;
+}
+
+/* ── HH Workspace dark glass buttons (white outline, white text) ── */
+.hdr-glass-btn {
+  border: 1px solid rgba(213, 213, 213, 0.28);
+  background: rgba(10, 10, 10, 0.72);
+  color: #f0f0f0;
+  text-shadow: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.hdr-glass-btn:hover {
+  border-color: rgba(240, 240, 240, 0.55);
+  background: rgba(20, 20, 20, 0.82);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.hdr-glass-btn:active {
+  border-color: rgba(240, 240, 240, 0.7);
+  background: rgba(28, 28, 28, 0.88);
+}
+.hdr-glass-icon {
+  color: #f0f0f0;
+  transition: color 0.25s ease;
+}
+.hdr-glass-btn:hover .hdr-glass-icon {
+  color: #ffffff;
+}
+.hdr-glass-btn:active .hdr-glass-icon {
+  color: #ffffff;
+}
+.hdr-glass-btn:disabled {
+  border-color: rgba(213, 213, 213, 0.12);
+  background: rgba(10, 10, 10, 0.4);
+  color: rgba(240, 240, 240, 0.35);
+  box-shadow: none;
+}
+.hdr-glass-btn:disabled .hdr-glass-icon {
+  color: rgba(240, 240, 240, 0.3);
+}
+
+/* ── Global header gold buttons (Community / Lounges) ── */
+.hdr-gold-btn {
+  border: 1px solid rgba(192, 145, 30, 0.4);
+  background: rgba(12, 10, 8, 0.72);
+  color: #c9b07a;
+  text-shadow: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.hdr-gold-btn:hover {
+  border-color: rgba(212, 165, 44, 0.7);
+  background: rgba(20, 16, 8, 0.85);
+  box-shadow: 0 0 10px rgba(212, 165, 44, 0.28), 0 0 22px rgba(212, 165, 44, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  color: #f0d896;
+}
+.hdr-gold-btn:active {
+  border-color: rgba(212, 165, 44, 0.9);
+  background: linear-gradient(135deg, rgba(192, 145, 30, 0.35) 0%, rgba(128, 96, 31, 0.25) 100%);
+  color: #1a1408;
+}
+.hdr-gold-icon {
+  color: #c9b07a;
+  transition: color 0.25s ease;
+}
+.hdr-gold-text {
+  color: #c9b07a;
+  transition: color 0.25s ease;
+}
+.hdr-gold-btn:hover .hdr-gold-icon,
+.hdr-gold-btn:hover .hdr-gold-text {
+  color: #f0d896;
+}
+.hdr-gold-btn:active .hdr-gold-icon,
+.hdr-gold-btn:active .hdr-gold-text {
+  color: #1a1408;
+}
+
+/* Metallic light sweep — runs every ~10s, stops after interaction */
+.hdr-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(212, 165, 44, 0.12) 40%,
+    rgba(245, 230, 176, 0.18) 50%,
+    rgba(212, 165, 44, 0.12) 60%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  animation: hdr-sweep-anim 10s ease-in-out infinite;
+  animation-delay: 4s;
+  pointer-events: none;
+}
+.hdr-gold-btn:hover .hdr-sweep::after { animation-play-state: paused; }
+.hdr-gold-btn:focus .hdr-sweep::after,
+.hdr-gold-btn:focus-within .hdr-sweep::after { animation: none; }
+@keyframes hdr-sweep-anim {
+  0%, 82%, 100% { left: -60%; opacity: 0; }
+  86% { opacity: 1; }
+  92% { left: 120%; opacity: 1; }
+  96% { left: 120%; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hdr-sweep::after { animation: none !important; }
+}
+
+/* ── TipTap / ProseMirror editor styles ── */
+.ProseMirror {
+  outline: none;
+}
+.ProseMirror h1 {
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+.ProseMirror h2 {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  color: #fff;
+}
+.ProseMirror h3 {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-top: 0.8em;
+  margin-bottom: 0.3em;
+  color: rgba(255,255,255,0.9);
+}
+.ProseMirror p {
+  margin-bottom: 0.8em;
+}
+.ProseMirror ul {
+  list-style: disc;
+  padding-left: 1.5em;
+  margin-bottom: 0.8em;
+}
+.ProseMirror ol {
+  list-style: decimal;
+  padding-left: 1.5em;
+  margin-bottom: 0.8em;
+}
+.ProseMirror li {
+  margin-bottom: 0.3em;
+}
+.ProseMirror blockquote {
+  border-left: 3px solid rgba(212,165,44,0.3);
+  padding-left: 1em;
+  margin: 1em 0;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+}
+.ProseMirror pre {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  padding: 0.75em 1em;
+  margin: 1em 0;
+  font-family: ui-monospace, monospace;
+  font-size: 0.85em;
+  overflow-x: auto;
+}
+.ProseMirror code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.85em;
+  background: rgba(255,255,255,0.06);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+.ProseMirror pre code {
+  background: none;
+  padding: 0;
+}
+.ProseMirror img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1em 0;
+}
+.ProseMirror a {
+  color: #d4a52c;
+  text-decoration: underline;
+}
+.ProseMirror .is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: rgba(255,255,255,0.25);
+  pointer-events: none;
+  height: 0;
+}
+.ProseMirror-focused {
+  outline: none;
+}
+.ProseMirror-selectednode {
+  outline: 2px solid rgba(212,165,44,0.4);
+  border-radius: 8px;
+}
+
+/* ── Mobile nav drawer: dark-glass surface with backdrop-blur fallback ── */
+.sv-mobile-nav-drawer {
+  background: rgba(10,9,8,0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+.sv-mobile-nav-header {
+  background: rgba(10,9,8,0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+@supports not ((backdrop-filter: blur(24px)) or (-webkit-backdrop-filter: blur(24px))) {
+  .sv-mobile-nav-drawer,
+  .sv-mobile-nav-header {
+    background: rgba(8,7,6,0.96);
+  }
+}
+
+/* ── Glass surface for analytics plates — translucency lets portal wallpaper show through ── */
+.data-plate {
+  border: 1px solid rgba(var(--portal-accent-rgb, 212,165,44), 0.15);
+  background: rgba(6, 8, 10, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+@supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  .data-plate {
+    background: rgba(6, 8, 10, 0.88);
+  }
+}
+
+/* ── Portal accent utility classes (replace hardcoded gold Tailwind classes) ── */
+.portal-tab-active {
+  background: rgba(var(--portal-accent-rgb, 212,165,44), 0.2);
+  color: var(--portal-accent-soft, #f5e6b0);
+  box-shadow: 0 0 4px rgba(var(--portal-accent-rgb, 212,165,44), 0.15);
+}
+.portal-tab-inactive {
+  color: rgba(255, 255, 255, 0.5);
+}
+.portal-tab-inactive:hover {
+  color: var(--portal-accent-soft, #f5e6b0);
+}
+.portal-accent-text {
+  color: var(--portal-accent, #d4a52c);
+}
+.portal-accent-soft-text {
+  color: var(--portal-accent-soft, #f5e6b0);
+}
+
+/* ── Hide scrollbar for horizontal tab strips (mobile) ── */
+.sv-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.sv-no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Staff Console scrollbar ── */
+.sv-staff-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 165, 44, 0.35) rgba(255, 255, 255, 0.04);
+}
+.sv-staff-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.sv-staff-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+}
+.sv-staff-scroll::-webkit-scrollbar-thumb {
+  background: rgba(212, 165, 44, 0.25);
+  border-radius: 4px;
+  border: 1px solid rgba(212, 165, 44, 0.12);
+}
+.sv-staff-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 165, 44, 0.45);
+}
+
+/* ── Glass panel scrollbar (My Spots, community glass containers) ── */
+.sv-glass-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 165, 44, 0.28) transparent;
+}
+.sv-glass-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sv-glass-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sv-glass-scroll::-webkit-scrollbar-thumb {
+  background: rgba(212, 165, 44, 0.22);
+  border-radius: 3px;
+}
+.sv-glass-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 165, 44, 0.4);
+}
